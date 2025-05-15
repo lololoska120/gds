@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.request-card {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.pending {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.volunteer-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9f0ff;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+}
+
+.volunteer-info ul {
+    list-style: disc inside;
+    margin: 5px 0 0 20px;
+}
+
+.no-response {
+    color: #666;
+    font-style: italic;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-link:hover {
+    background-color: #5a6268;
+}

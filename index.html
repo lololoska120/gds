@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style/diploma.css">
+<meta charset="UTF-8">
+</head>
+<body>
+<header class="head">
+  <div class="head-card">
+    <!-- Логотип -->
+    <div class="head-logo">
+      <img src="img/diplomaimg/30c0fd64-fe40-45a2-8d16-56827f6d19ef.png"
+           alt="Логотип"
+           width = "100px"
+           height = "100px">
+    </div>
+
+    <!-- Навигация -->
+    <nav class="head-nav">
+      <a href="/views/volunteer_search.php" class="head-a">Отзывы</a>
+      <a href="login.php" class="head-a">Войти</a>
+      <a href="register_choice.php" class="head-a">Регистрация</a>
+    </nav>
+
+    <!-- Кнопка бургер-меню для мобильных устройств -->
+    <button class="burger" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+    <section class = "wonders">
+    <div class = "wonders-card">
+        <div class = "wonders-title">
+        <h2 class = "wonders-h2">Чудеса в Мире</h2>
+        <p class = "wonders-p">Фонд «Добрые сердца» поддерживает тех, кто оказался в трудной ситуации</p>
+            <a href = "/views/volunteer_search.php" class = "wonders-a">Написать</a>
+        </div>
+        <div class = "wonders-img">
+        <img src="img/diplomaimg/dde04712-72d0-4194-be9d-cdad3a6af2dd.png"
+             width = "400px"
+             height = "400px">
+        </div>
+        </div>
+    </section>
+    <section class="ecoloji">
+  <div class="ecoloji-card">
+    <div class="ecoloji-img img">
+      <img src="img/diplomaimg/8fb70150-18d9-4c9c-aaa2-ce027f32497d.png"
+           alt="Кто мы?">
+    </div>
+    <div class="ecoloji-title">
+      <h2 class="ecoloji-h2">Кто мы?</h2>
+      <p class="ecoloji-p">«Добрые сердца» — это команда волонтеров, благотворителей и просто неравнодушных людей</p>
+        <a href = "/views/volunteer_search.php" class = "wonders-a">Написать</a>
+    </div>
+  </div>
+</section>
+    <div class="container">
+    <h2 class = "can-h2">Отзывы наших пользователей</h2>
+
+    <!-- Форма для добавления отзыва -->
+    <form class="review-form" id="reviewForm">
+      <input type="text" id="name" placeholder="Ваше имя" required>
+      <textarea id="message" rows="4" placeholder="Напишите свой отзыв..." required></textarea>
+      <button type="submit">Оставить отзыв</button>
+    </form>
+
+    <!-- Блоки отзывов -->
+    <div id="reviewsList">
+      <!-- Пример статичного отзыва -->
+      <div class="review-card">
+        <h4>Анна</h4>
+        <p>Замечательная команда! Очень помогли в трудную минуту. Обязательно буду рекомендовать другим.</p>
+      </div>
+      <div class="review-card">
+        <h4>Иван</h4>
+        <p>Спасибо за вашу работу. Такие проекты нужны миру!</p>
+      </div>
+    </div>
+
+    <!-- Сообщение о входе -->
+    <div class="login-message">
+      Хотите оставить свой отзыв? <a href="register_choice.php">Зарегистрируйтесь</a> или войдите.
+    </div>
+  </div>
+    
+    <header class = "coment">
+        <div calss = "coment-card">
+    <h2 class = "coment">Отзывы наших пользователей</h2>
+            </div>
+    </header>
+    <script>
+    // Простая логика добавления отзыва (временно, без бэкенда)
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !message) {
+        alert("Пожалуйста, заполните все поля.");
+        return;
+      }
+
+      const reviewCard = document.createElement('div');
+      reviewCard.className = 'review-card';
+      reviewCard.innerHTML = `
+        <h4>${name}</h4>
+        <p>${message}</p>
+      `;
+
+      document.getElementById('reviewsList').prepend(reviewCard);
+
+      // Очистить форму
+      document.getElementById('reviewForm').reset();
+    });
+  </script>
+    <script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.head-nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    burger.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
